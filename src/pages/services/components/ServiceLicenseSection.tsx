@@ -56,10 +56,11 @@ const MAIN_SERVICES: ServiceItem[] = [
         { classification: '국번 서비스', item: '스냅샷', spec: 'VM 당', skipUnit: true, skipBilling: true },
         { classification: '공용 방화벽 서비스', item: '공용 방화벽 서비스', spec: '방화벽 사용 IP 수량에 따라 과금', skipUnit: true, skipBilling: true, note: '개인화 데스크톱' },
         { classification: '백신', groupEnd: true, item: 'V3 Net for Windows Server', spec: '공유 자원 풀', skipUnit: true, skipBilling: true, note: '20% 할인' },
-        { category: 'IaaS\n(outpost)', categoryRowspan: 5, classification: 'SCI', item: 'Spharos cloud infrastructure', spec: '100GB 당', unit: 'Core', billing: '월청구', billingRowspan: 5, note: 'Spharos CMP 기본 포함', noteRowspan: 5 },
-        { classification: 'SCM', item: 'Spharos cloud manager', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
-        { classification: 'SUS', item: 'Spharos unified storage', spec: 'VM 당', unit: 'TiB', skipBilling: true, skipNote: true },
-        { classification: 'SAI', item: 'Spharos AI platform', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
+        { category: 'IaaS\n(outpost)', categoryRowspan: 6, classification: 'SCI', item: 'Spharos One cloud infrastructure', spec: '100GB 당', unit: 'Core', billing: '월청구', billingRowspan: 6, note: 'Spharos CMP 기본 포함', noteRowspan: 6 },
+        { classification: 'SCM', item: 'Spharos One cloud manager', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
+        { classification: 'SUS', item: 'Spharos One unified storage', spec: 'VM 당', unit: 'TiB', skipBilling: true, skipNote: true },
+        { classification: 'SKP', item: 'Spharos One Kubernetes Platform', spec: 'Pod 당', unit: 'Pod', skipBilling: true, skipNote: true },
+        { classification: 'SAI', item: 'Spharos One AI platform', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
         { classification: 'HW', item: '요구 사양 별', spec: 'VM 당', unit: 'Node', skipBilling: true, skipNote: true },
       ],
     },
@@ -304,7 +305,7 @@ function ServiceTableModal({ table, onClose }: { table: NonNullable<ServiceItem[
                   <td style={groupStyle(tdCell, row.groupEnd)}>{row.item}</td>
                   <td style={groupStyle({ ...tdCell, textAlign: 'left' }, row.groupEnd)}>{row.spec}</td>
                   {!row.skipUnit && (
-                    <td rowSpan={row.unitRowspan ?? 1} style={groupStyle({ ...tdCell, whiteSpace: 'nowrap' }, row.groupEnd)}>{row.unit}</td>
+                    <td rowSpan={row.unitRowspan ?? 1} style={groupStyle({ ...tdCell, whiteSpace: 'nowrap' }, row.groupEnd, row.categoryGroupEnd)}>{row.unit}</td>
                   )}
                   {!row.skipBilling && (
                     row.billing !== undefined
