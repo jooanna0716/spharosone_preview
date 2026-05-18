@@ -46,8 +46,6 @@ export default function HomePage() {
       const vh = window.innerHeight;
 
       const storyTop = story.offsetTop;
-      const storyH = story.offsetHeight;
-      const lastCardStart = storyTop + (2 / 3) * storyH;
       const bridgeTop = bridge.offsetTop;
       const bridgeH = bridge.offsetHeight;
 
@@ -58,26 +56,42 @@ export default function HomePage() {
         return;
       }
 
-      // 2. 스토리 카드 1-2: 자연 스크롤 (카드 3 시작 전까지)
+      // 2. 스토리 카드 1·2: 자연 스크롤
+      const lastCardStart = storyTop + 2 * vh;
       if (scrollY >= storyTop && scrollY < lastCardStart) {
         return;
       }
 
-      // 3. 스토리 마지막 카드 → 브릿지로 스냅
+      // 3. 스토리 카드 3: 스냅 포인트 (이미 거기 있으면 브릿지로)
       if (scrollY >= lastCardStart && scrollY < bridgeTop) {
         e.preventDefault();
-        snapTo(bridge);
+        if (Math.abs(scrollY - lastCardStart) < 10) {
+          snapTo(bridge);
+        } else {
+          snapTo(lastCardStart);
+        }
         return;
       }
 
-      // 4. 브릿지 섹션 → 핵심가치(showcase)로 스냅
-      if (scrollY >= bridgeTop && scrollY < bridgeTop + bridgeH) {
+      // 4. 브릿지 진입 → bridgeTop에 정확히 스냅 (이미 거기 있으면 showcase로)
+      if (scrollY >= bridgeTop && scrollY < bridgeTop + bridgeH * 0.6) {
+        e.preventDefault();
+        if (Math.abs(scrollY - bridgeTop) < 10) {
+          snapTo(showcase);
+        } else {
+          snapTo(bridge);
+        }
+        return;
+      }
+
+      // 5. 브릿지 하반부 → showcase
+      if (scrollY >= bridgeTop + bridgeH * 0.6 && scrollY < bridgeTop + bridgeH) {
         e.preventDefault();
         snapTo(showcase);
         return;
       }
 
-      // 5. 핵심가치 + 과금방식 구간: 자유 스크롤
+      // 6. 핵심가치 + 과금방식 구간: 자유 스크롤
       {
         const pricing = pricingRef.current;
         const showcaseTop = showcase.offsetTop;
@@ -87,7 +101,7 @@ export default function HomePage() {
         }
       }
 
-      // 6. 도입효과 마지막 슬라이드(24/7) → 기대효과
+      // 7. 도입효과 마지막 슬라이드(24/7) → 기대효과
       {
         const impactTop = impact.offsetTop;
         const lastSlideStart = impactTop + 3 * vh;
@@ -99,7 +113,7 @@ export default function HomePage() {
         }
       }
 
-      // 7. 기대효과 마지막 카드(6번째) → CTA
+      // 8. 기대효과 마지막 카드(6번째) → CTA
       {
         const testimonialTop = testimonial.offsetTop;
         const lastTestimonialCard = testimonialTop + 5 * vh;
