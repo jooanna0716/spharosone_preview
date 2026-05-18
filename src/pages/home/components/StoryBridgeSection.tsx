@@ -29,7 +29,7 @@ export default function StoryBridgeSection() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(0,0,0,0.30)',
+          background: 'rgba(0,0,0,0.50)',
         }}
       />
       {/* 상단 페이드 — 히어로 섹션과 자연스럽게 연결 */}
