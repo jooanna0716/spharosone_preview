@@ -96,7 +96,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SCI',
     label: 'SCI',
-    subtitle: 'Spharos ONE Cloud Infrastructure',
+    subtitle: 'Spharos One Cloud Infrastructure',
     definition: '표준 아키텍처를 기반으로 서버, 스토리지, 가상화, DR을 통합 패키징하여 고객사 환경에 맞춘 최적의 설치와 유연한 인프라 확장을 지원하는 온프레미스 클라우드 구축 서비스입니다.',
     features: [],
     recommend: [
@@ -107,7 +107,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SCM',
     label: 'SCM',
-    subtitle: 'Spharos ONE Cloud Manager',
+    subtitle: 'Spharos One Cloud Manager',
     definition: '인프라 상태, 비용, 보안 현황을 단일 플랫폼에서 가시화하고 온프레미스와 클라우드를 통합 운영함으로써 자원 효율성과 비용 절감을 극대화하는 관리 솔루션입니다.',
     features: [],
     recommend: [
@@ -118,7 +118,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SUS',
     label: 'SUS',
-    subtitle: 'Spharos ONE Unified Storage',
+    subtitle: 'Spharos One Unified Storage',
     definition: '파일, 오브젝트, 블록 스토리지를 하나의 솔루션으로 통합하여 관리 및 백업을 수행하며, 재해 복구(DR) 기능을 통해 데이터 보안과 복구의 안정성을 보장하는 통합 스토리지 서비스입니다.',
     features: [],
     recommend: [
@@ -130,7 +130,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SKP',
     label: 'SKP',
-    subtitle: 'Spharos ONE Kubernetes Platform',
+    subtitle: 'Spharos One Kubernetes Platform',
     definition: '클러스터 및 테넌트 환경에서 쿠버네티스의 설치부터 모니터링까지 전 단계를 통합 관리하여 컨테이너 기반 서비스의 운영 효율을 높여주는 플랫폼입니다.',
     features: [],
     recommend: [
@@ -141,7 +141,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SAI',
     label: 'SAI',
-    subtitle: 'Spharos ONE Enterprise AI',
+    subtitle: 'Spharos One Enterprise AI',
     definition: '온프레미스 환경에서 GPU 통합 관리 및 공유를 지원하고 LLM 등 AI 워크로드의 신속한 실행과 효율적인 운영을 가능하게 하는 기업용 AI 전용 솔루션입니다.',
     features: [],
     recommend: [

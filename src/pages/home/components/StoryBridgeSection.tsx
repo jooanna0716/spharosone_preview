@@ -29,7 +29,7 @@ export default function StoryBridgeSection() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(0,0,0,0.55)',
+          background: 'rgba(0,0,0,0.30)',
         }}
       />
       {/* 콘텐츠 — 오버레이 위 */}

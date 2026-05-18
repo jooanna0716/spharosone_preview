@@ -89,7 +89,7 @@ export default function HeroSection() {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'rgba(0,0,0,0.20)',
+            background: 'rgba(0,0,0,0.08)',
             pointerEvents: 'none',
           }}
         />
