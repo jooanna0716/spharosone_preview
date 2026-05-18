@@ -164,11 +164,11 @@ export default function TestimonialSection() {
         <div className="text-left">
           <span
             className="inline-block font-bold mb-3"
-            style={{ color: ACTIVE_BLUE, fontSize: 'clamp(18px, 2vw, 30px)' }}
+            style={{ color: ACTIVE_BLUE, fontSize: 'var(--fs-label)' }}
           >
             기대효과
           </span>
-          <h2 className="font-extrabold leading-tight" style={{ color: '#111111', fontSize: 'clamp(28px, 4vw, 60px)' }}>
+          <h2 className="font-extrabold leading-tight" style={{ color: '#111111', fontSize: 'var(--fs-display)' }}>
             현장의 고민을 확신으로
           </h2>
         </div>

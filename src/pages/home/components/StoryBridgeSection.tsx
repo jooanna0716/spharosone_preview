@@ -36,7 +36,7 @@ export default function StoryBridgeSection() {
       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2
           style={{
-            fontSize: 'clamp(36px, 5.5vw, 72px)',
+            fontSize: 'var(--fs-display)',
             fontWeight: 800,
             lineHeight: 1.1,
             margin: '0 0 32px',
@@ -58,7 +58,7 @@ export default function StoryBridgeSection() {
 
         <p
           style={{
-            fontSize: '30px',
+            fontSize: 'var(--fs-label)',
             fontWeight: 700,
             color: '#ffffff',
             marginBottom: '24px',
@@ -69,7 +69,7 @@ export default function StoryBridgeSection() {
         </p>
         <p
           style={{
-            fontSize: '24px',
+            fontSize: 'var(--fs-subtitle)',
             fontWeight: 400,
             color: 'rgba(255,255,255,0.70)',
             marginBottom: '32px',
@@ -81,7 +81,7 @@ export default function StoryBridgeSection() {
         </p>
         <p
           style={{
-            fontSize: '24px',
+            fontSize: 'var(--fs-subtitle)',
             fontWeight: 500,
             color: '#5BA4F5',
             lineHeight: 1.6,

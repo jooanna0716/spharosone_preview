@@ -88,8 +88,8 @@ function DesktopCouponShowcase() {
 
         {/* 헤더 */}
         <div style={{ marginBottom: '48px' }}>
-          <span className="section-label" style={{ fontSize: '30px', color: '#5BA4F5' }}>핵심가치</span>
-          <h2 className="font-extrabold" style={{ fontSize: '60px', color: '#111111', lineHeight: 1.2 }}>
+          <span className="section-label" style={{ fontSize: 'var(--fs-label)', color: '#5BA4F5' }}>핵심가치</span>
+          <h2 className="font-extrabold" style={{ fontSize: 'var(--fs-display)', color: '#111111', lineHeight: 1.2 }}>
             스파로스원을 선택해야 하는 이유
           </h2>
         </div>
@@ -132,12 +132,12 @@ function DesktopCouponShowcase() {
                   gap: '20px',
                 }}
               >
-                <h3 className="font-bold" style={{ fontSize: '30px', lineHeight: 1.35, margin: 0 }}>
+                <h3 className="font-bold" style={{ fontSize: 'var(--fs-label)', lineHeight: 1.35, margin: 0 }}>
                   <span style={{ color: '#5BA4F5' }}>{card.titleBlue}</span>
                   <br />
                   <span style={{ color: '#111111' }}>{card.titleBlack}</span>
                 </h3>
-                <p style={{ fontSize: '24px', color: 'rgba(17,17,17,0.72)', lineHeight: 1.7, margin: 0 }}>
+                <p style={{ fontSize: 'var(--fs-subtitle)', color: 'rgba(17,17,17,0.72)', lineHeight: 1.7, margin: 0 }}>
                   {card.desc}
                 </p>
               </div>

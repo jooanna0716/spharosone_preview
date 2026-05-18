@@ -173,7 +173,7 @@ export default function SpharosOneStorySection() {
             className="story-h2"
             style={{
               fontFamily: "'Poppins', sans-serif",
-              fontSize: '60px',
+              fontSize: 'var(--fs-display)',
               fontWeight: 800,
               color: '#FFFFFF',
               lineHeight: 1.2,
@@ -193,15 +193,15 @@ export default function SpharosOneStorySection() {
                     <img src={card.image} alt="" style={imgStyle} />
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <h3 className="story-h3" style={{ fontSize: '35px', fontWeight: 700, color: '#FFFFFF', whiteSpace: 'pre-line', lineHeight: 1.35 }}>
+                    <h3 className="story-h3" style={{ fontSize: 'var(--fs-heading)', fontWeight: 700, color: '#FFFFFF', whiteSpace: 'pre-line', lineHeight: 1.35 }}>
                       {card.title}
                     </h3>
                     <div style={{ width: '36px', height: '2px', background: '#5BA4F5' }} />
-                    <p className="story-p" style={{ fontSize: '24px', color: '#FFFFFF', lineHeight: 1.55, whiteSpace: 'pre-line' }}>
+                    <p className="story-p" style={{ fontSize: 'var(--fs-subtitle)', color: '#FFFFFF', lineHeight: 1.55, whiteSpace: 'pre-line' }}>
                       {card.content}
                     </p>
                     {card.lastLine && (
-                      <p className="story-p" style={{ fontSize: '30px', fontWeight: 600, color: '#FFFFFF', lineHeight: 1.4, margin: 0 }}>
+                      <p className="story-p" style={{ fontSize: 'var(--fs-label)', fontWeight: 600, color: '#FFFFFF', lineHeight: 1.4, margin: 0 }}>
                         {card.lastLine}
                       </p>
                     )}
@@ -210,15 +210,15 @@ export default function SpharosOneStorySection() {
               ) : (
                 /* 이미지 없는 카드 */
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '700px' }}>
-                  <h3 className="story-h3" style={{ fontSize: '35px', fontWeight: 700, color: '#FFFFFF', whiteSpace: 'pre-line', lineHeight: 1.35 }}>
+                  <h3 className="story-h3" style={{ fontSize: 'var(--fs-heading)', fontWeight: 700, color: '#FFFFFF', whiteSpace: 'pre-line', lineHeight: 1.35 }}>
                     {card.title}
                   </h3>
                   <div style={{ width: '36px', height: '2px', background: '#5BA4F5' }} />
-                  <p className="story-p" style={{ fontSize: '24px', color: '#FFFFFF', lineHeight: 1.55, whiteSpace: 'pre-line' }}>
+                  <p className="story-p" style={{ fontSize: 'var(--fs-subtitle)', color: '#FFFFFF', lineHeight: 1.55, whiteSpace: 'pre-line' }}>
                     {card.content}
                   </p>
                   {card.lastLine && (
-                    <p className="story-p" style={{ fontSize: '30px', fontWeight: 600, color: '#FFFFFF', lineHeight: 1.4, margin: 0 }}>
+                    <p className="story-p" style={{ fontSize: 'var(--fs-label)', fontWeight: 600, color: '#FFFFFF', lineHeight: 1.4, margin: 0 }}>
                       {card.lastLine}
                     </p>
                   )}

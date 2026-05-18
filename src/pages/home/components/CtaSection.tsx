@@ -16,14 +16,14 @@ export default function CtaSection() {
       <div className="w-full px-6 md:px-[110px] py-48 md:py-64">
         <p
           className="font-semibold leading-tight"
-          style={{ fontSize: '24px', color: '#5BA4F5' }}
+          style={{ fontSize: 'var(--fs-subtitle)', color: '#5BA4F5' }}
         >
           프라이빗 클라우드의 새로운 기준 Spharos One
         </p>
         <div className="mt-5">
           <h2
             className="font-extrabold text-white leading-tight"
-            style={{ fontSize: '60px' }}
+            style={{ fontSize: 'var(--fs-display)' }}
           >
             전문 컨설턴트의 상담을 받아보세요
           </h2>
@@ -38,7 +38,7 @@ export default function CtaSection() {
           type="button"
           onClick={() => setPopupOpen(true)}
           className="inline-flex items-center gap-3 mt-10 cursor-pointer group rounded-full px-8 py-4 font-semibold transition-all hover:opacity-90"
-          style={{ background: '#5BA4F5', color: '#fff', fontSize: '30px' }}
+          style={{ background: '#5BA4F5', color: '#fff', fontSize: 'var(--fs-label)' }}
         >
           문의하기
           <span

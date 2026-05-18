@@ -86,7 +86,7 @@ function CompareSlide() {
           <span style={{ fontSize: '13px', fontWeight: 600, color: '#666', background: 'rgba(0,0,0,0.10)', padding: '4px 12px', borderRadius: '20px' }}>기존 방식</span>
           <span style={{ fontSize: '24px', fontWeight: 700, color: '#555' }}>CAPEX</span>
         </div>
-        <p style={{ fontSize: '20px', color: '#777', lineHeight: 1.6, margin: 0 }}>
+        <p style={{ fontSize: 'var(--fs-body)', color: '#777', lineHeight: 1.6, margin: 0 }}>
           서버·스토리지를 직접 구매하고 데이터센터를 구축하는 전통적인 자본 지출 방식입니다.
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -106,7 +106,7 @@ function CompareSlide() {
       <div style={{ background: '#FFFFFF', borderRadius: '20px', padding: '36px 40px', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: '0 4px 32px rgba(91,164,245,0.18)', border: '2px solid #5BA4F5' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <span style={{ fontSize: '13px', fontWeight: 700, color: '#fff', background: '#5BA4F5', padding: '4px 12px', borderRadius: '20px' }}>추천</span>
-          <span style={{ fontSize: '24px', fontWeight: 700, color: '#111' }}>Spharos One (OPEX)</span>
+          <span style={{ fontSize: 'var(--fs-subtitle)', fontWeight: 700, color: '#111' }}>Spharos One (OPEX)</span>
         </div>
         <p style={{ fontSize: '20px', color: '#444', lineHeight: 1.6, margin: 0 }}>
           초기 투자 없이 사용한 만큼 지불하는 구독형 운영 지출 방식으로 유연하게 클라우드를 운영합니다.
@@ -115,7 +115,7 @@ function CompareSlide() {
           {COMPARISON_ROWS.map((row) => (
             <div key={row.label} style={{ display: 'flex', alignItems: 'center' }}>
               <CheckIcon pass={true} />
-              <span style={{ fontSize: '20px', color: '#222' }}>
+              <span style={{ fontSize: 'var(--fs-body)', color: '#222' }}>
                 <span style={{ fontWeight: 600, color: '#5BA4F5', marginRight: '6px' }}>{row.label}:</span>
                 {row.opex}
               </span>
@@ -288,8 +288,8 @@ export default function PricingModelSection() {
 
         {/* 헤더 */}
         <div style={{ marginBottom: '64px' }}>
-          <span style={{ fontSize: '30px', color: '#5BA4F5', fontWeight: 600 }}>비즈니스 혜택</span>
-          <h2 style={{ fontSize: '60px', fontWeight: 800, color: '#111111', lineHeight: 1.2, margin: '8px 0 0' }}>
+          <span style={{ fontSize: 'var(--fs-label)', color: '#5BA4F5', fontWeight: 600 }}>비즈니스 혜택</span>
+          <h2 style={{ fontSize: 'var(--fs-display)', fontWeight: 800, color: '#111111', lineHeight: 1.2, margin: '8px 0 0' }}>
             선납금 0원, 위약금 0원<br />구독형으로 비즈니스 혜택을 누리세요
           </h2>
         </div>
@@ -338,7 +338,7 @@ export default function PricingModelSection() {
         <div style={{ width: '52px', height: '3px', background: '#5BA4F5', borderRadius: '2px', margin: '72px 0 48px' }} />
 
         {/* 유연한 계약 옵션 */}
-        <h3 style={{ fontSize: '35px', fontWeight: 700, color: '#111', margin: '0 0 32px', lineHeight: 1.3 }}>
+        <h3 style={{ fontSize: 'var(--fs-heading)', fontWeight: 700, color: '#111', margin: '0 0 32px', lineHeight: 1.3 }}>
           유연한 계약 옵션
         </h3>
 
@@ -369,13 +369,13 @@ export default function PricingModelSection() {
               >
                 {opt.tag}
               </span>
-              <p style={{ fontSize: '24px', fontWeight: 700, color: opt.highlight ? '#fff' : '#111', margin: 0 }}>
+              <p style={{ fontSize: 'var(--fs-subtitle)', fontWeight: 700, color: opt.highlight ? '#fff' : '#111', margin: 0 }}>
                 {opt.title}
               </p>
               <p style={{ fontSize: '20px', fontWeight: 600, color: opt.highlight ? 'rgba(255,255,255,0.85)' : '#5BA4F5', margin: 0 }}>
                 {opt.period}
               </p>
-              <p style={{ fontSize: '20px', color: opt.highlight ? 'rgba(255,255,255,0.80)' : '#666', lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontSize: 'var(--fs-body)', color: opt.highlight ? 'rgba(255,255,255,0.80)' : '#666', lineHeight: 1.7, margin: 0 }}>
                 {opt.desc}
               </p>
             </div>

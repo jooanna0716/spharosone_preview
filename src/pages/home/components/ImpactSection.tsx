@@ -86,7 +86,7 @@ function DesktopImpactSection() {
           <div style={{ paddingTop: '160px', flexShrink: 0 }}>
             <span
               style={{
-                fontSize: '30px',
+                fontSize: 'var(--fs-label)',
                 fontWeight: 700,
                 color: '#5BA4F5',
                 letterSpacing: '0.12em',
@@ -98,7 +98,7 @@ function DesktopImpactSection() {
             </span>
             <h2
               style={{
-                fontSize: '60px',
+                fontSize: 'var(--fs-display)',
                 fontWeight: 800,
                 color: '#FFFFFF',
                 lineHeight: 1.2,
@@ -216,7 +216,7 @@ function DesktopImpactSection() {
                     </h3>
                     <p
                       style={{
-                        fontSize: '30px',
+                        fontSize: 'var(--fs-label)',
                         color: 'rgba(255,255,255,0.85)',
                         lineHeight: 1.7,
                         margin: 0,
