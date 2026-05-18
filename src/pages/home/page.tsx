@@ -22,11 +22,10 @@ export default function HomePage() {
 
   useEffect(() => {
     let locked = false;
-    let atBridge = false;
 
     const snapTo = (target: HTMLElement | number) => {
       locked = true;
-      const top = typeof target === 'number' ? target : target.offsetTop;
+      const top = typeof target === 'number' ? target : target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top, behavior: 'smooth' });
       setTimeout(() => { locked = false; }, 2000);
     };
@@ -64,22 +63,17 @@ export default function HomePage() {
         return;
       }
 
-      // 3. 스토리 마지막 카드 → 브릿지 최상단으로 즉시 스냅
+      // 3. 스토리 마지막 카드 → 브릿지로 스냅
       if (scrollY >= lastCardStart && scrollY < bridgeTop) {
         e.preventDefault();
-        locked = true;
-        window.scrollTo({ top: bridge.offsetTop, behavior: 'instant' as ScrollBehavior });
-        setTimeout(() => { locked = false; atBridge = true; }, 800);
+        snapTo(bridge);
         return;
       }
 
-      // 4. 브릿지 섹션 → showcase로 스냅 (atBridge일 때만)
+      // 4. 브릿지 섹션 → 핵심가치(showcase)로 스냅
       if (scrollY >= bridgeTop && scrollY < bridgeTop + bridgeH) {
         e.preventDefault();
-        if (atBridge) {
-          atBridge = false;
-          snapTo(showcase);
-        }
+        snapTo(showcase);
         return;
       }
 
