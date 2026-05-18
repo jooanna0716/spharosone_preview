@@ -40,7 +40,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 px-6 md:px-[110px] bg-stone-50 overflow-hidden">
+      <section className="relative pt-32 pb-16 px-6 md:px-[120px] bg-stone-50 overflow-hidden">
         <div className="w-full text-center">
           <span className="inline-block px-4 py-1.5 bg-amber-50 border border-amber-200 text-amber-600 text-xs font-semibold tracking-widest uppercase rounded-full mb-4">
             Contact

@@ -162,7 +162,7 @@ export default function SpharosOneStorySection() {
           style={{
             flex: 1,
             width: '100%',
-            padding: '160px clamp(24px, 7.5vw, 110px)',
+            padding: '160px 120px',
             zIndex: 1,
             display: 'grid',
             gridTemplateRows: 'auto 1fr auto',

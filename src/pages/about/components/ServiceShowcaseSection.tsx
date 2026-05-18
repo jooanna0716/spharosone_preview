@@ -134,7 +134,7 @@ export default function ServiceShowcaseSection({ activeTab, onTabChange }: Props
       }}
     >
       <div
-        className="w-full flex flex-col px-6 md:px-[110px]"
+        className="w-full flex flex-col px-6 md:px-[120px]"
       >
         {/* Rounded image card — 상단 바(타이틀+탭)가 이미지 내부로 들어옴 */}
         <div

@@ -160,7 +160,7 @@ export default function TestimonialSection() {
       >
 
       {/* 헤더 */}
-      <div className="flex-shrink-0 px-6 md:px-[110px] pb-6 w-full" style={{ paddingTop: 'clamp(20px, 5vh, 80px)' }}>
+      <div className="flex-shrink-0 px-6 md:px-[120px] pb-6 w-full" style={{ paddingTop: 'clamp(20px, 5vh, 80px)' }}>
         <div className="text-left">
           <span
             className="inline-block font-bold mb-3"
@@ -239,8 +239,8 @@ export default function TestimonialSection() {
         className="hidden md:flex items-stretch"
         style={{
           flex: 4,
-          paddingLeft: leftOffset > 0 ? `${leftOffset}px` : '110px',
-          paddingRight: leftOffset > 0 ? `${leftOffset}px` : '110px',
+          paddingLeft: leftOffset > 0 ? `${leftOffset}px` : '120px',
+          paddingRight: leftOffset > 0 ? `${leftOffset}px` : '120px',
           gap: `${GAP}px`,
           minHeight: 0,
           paddingBottom: '0',

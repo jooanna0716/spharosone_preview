@@ -6,7 +6,7 @@ export default function FeaturesSection() {
   const active = FEATURES[activeIdx];
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-[110px] bg-white w-full">
+    <section className="py-16 md:py-24 px-6 md:px-[120px] bg-white w-full">
       <div className="w-full">
         {/* Header */}
         <div className="mb-12 md:mb-16">

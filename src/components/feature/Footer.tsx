@@ -16,7 +16,7 @@ export default function Footer() {
   const [open, setOpen] = useState(false);
 
   return (
-    <footer className="bg-white pt-10 pb-[60px] px-6 md:px-[110px]">
+    <footer className="bg-white pt-10 pb-[60px] px-6 md:px-[120px]">
       <div className="w-full">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-1.5">

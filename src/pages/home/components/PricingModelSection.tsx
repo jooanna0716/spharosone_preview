@@ -286,7 +286,7 @@ export default function PricingModelSection() {
 
   return (
     <section style={{ background: '#FFFFFF', padding: 'clamp(60px, 10vh, 160px) 0' }}>
-      <div style={{ width: '100%', padding: '0 clamp(24px, 8vw, 110px)' }}>
+      <div style={{ width: '100%', padding: '0 120px' }}>
 
         {/* 헤더 */}
         <div style={{ marginBottom: '64px' }}>

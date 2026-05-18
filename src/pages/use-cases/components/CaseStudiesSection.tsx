@@ -6,7 +6,7 @@ export default function CaseStudiesSection() {
   const active = CASE_STUDIES.find((c) => c.key === activeKey)!;
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-[110px] w-full" style={{ background: '#F8F8FA' }}>
+    <section className="py-16 md:py-24 px-6 md:px-[120px] w-full" style={{ background: '#F8F8FA' }}>
       <div className="w-full">
         {/* Header */}
         <div className="mb-12 md:mb-16">

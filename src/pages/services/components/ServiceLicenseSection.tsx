@@ -56,11 +56,10 @@ const MAIN_SERVICES: ServiceItem[] = [
         { classification: '국번 서비스', item: '스냅샷', spec: 'VM 당', skipUnit: true, skipBilling: true },
         { classification: '공용 방화벽 서비스', item: '공용 방화벽 서비스', spec: '방화벽 사용 IP 수량에 따라 과금', skipUnit: true, skipBilling: true, note: '개인화 데스크톱' },
         { classification: '백신', groupEnd: true, item: 'V3 Net for Windows Server', spec: '공유 자원 풀', skipUnit: true, skipBilling: true, note: '20% 할인' },
-        { category: 'IaaS\n(outpost)', categoryRowspan: 6, classification: 'SCI', item: 'Spharos One cloud infrastructure', spec: '100GB 당', unit: 'Core', billing: '월청구', billingRowspan: 6, note: 'Spharos CMP 기본 포함', noteRowspan: 6 },
+        { category: 'IaaS\n(outpost)', categoryRowspan: 5, classification: 'SCI', item: 'Spharos One cloud infrastructure', spec: '100GB 당', unit: 'Core', billing: '월청구', billingRowspan: 5, note: 'Spharos CMP 기본 포함', noteRowspan: 5 },
         { classification: 'SCM', item: 'Spharos One cloud manager', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
         { classification: 'SUS', item: 'Spharos One unified storage', spec: 'VM 당', unit: 'TiB', skipBilling: true, skipNote: true },
-        { classification: 'SKP', item: 'Spharos One Kubernetes Platform', spec: 'Pod 당', unit: 'Pod', skipBilling: true, skipNote: true },
-        { classification: 'SAI', item: 'Spharos One AI platform', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
+        { classification: 'SAI (SKP)', item: 'Spharos One AI platform', spec: 'VM 당', unit: 'Core', skipBilling: true, skipNote: true },
         { classification: 'HW', item: '요구 사양 별', spec: 'VM 당', unit: 'Node', skipBilling: true, skipNote: true },
       ],
     },
@@ -144,7 +143,7 @@ const LICENSE_SERVICES: ServiceItem[] = [
   {
     key: 'SAI',
     label: 'SAI',
-    subtitle: 'Spharos One Enterprise AI',
+    subtitle: 'Spharos One AI Platform',
     definition: '온프레미스 환경에서 GPU 통합 관리 및 공유를 지원하고 LLM 등 AI 워크로드의 신속한 실행과 효율적인 운영을 가능하게 하는 기업용 AI 전용 솔루션입니다.',
     features: [],
     recommend: [
@@ -588,7 +587,7 @@ export default function ServiceLicenseSection({ activeTab }: Props) {
 
   return (
     <section style={{ background: '#F0F0F0', padding: '80px 0 80px' }}>
-      <div style={{ width: '100%', padding: isMd ? '0 110px' : '0 24px' }}>
+      <div style={{ width: '100%', padding: isMd ? '0 120px' : '0 24px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           {services.map((s) => (
             <ServiceDetailRow key={s.key} item={s} />

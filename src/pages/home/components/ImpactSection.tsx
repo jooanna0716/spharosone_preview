@@ -76,7 +76,7 @@ function DesktopImpactSection() {
         <div
           style={{
             width: '100%',
-            padding: '0 clamp(24px, 7.5vw, 110px)',
+            padding: '0 120px',
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
